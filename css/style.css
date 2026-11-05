@@ -1,0 +1,734 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --naranja: #ff6500;
+    --negro: #100600;
+}
+
+
+.header {
+    width: 100%;
+    background-color: #100600;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 8px 25px;
+    background-color: transparent;
+}
+
+.logo-header {
+    width: 110px;
+    height: auto;
+}
+
+.navbar-nav {
+    gap: 15px;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: white;
+}
+
+.boton-login {
+    border: 1px solid var(--naranja);
+    border-radius: 7px;
+    padding: 5px 12px !important;
+    color: var(--naranja) !important;
+}
+
+.boton-cuenta {
+    background-color: var(--naranja);
+    color: black !important;
+    border-radius: 7px;
+    padding: 5px 12px !important;
+}
+
+.boton-login:hover,
+.boton-cuenta:hover {
+    opacity: 0.8;
+}
+
+
+.hero {
+    min-height: 525px;
+    position: relative;
+    background-image:
+        linear-gradient(to bottom, rgba(0,0,0,0.20), #100600),
+        linear-gradient(to right, rgba(10,4,0,0.98), rgba(10,4,0,0.10)),
+        url("../img/naruto banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-contenido {
+    padding-top: 40px;
+}
+
+.logo-principal {
+    width: 215px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.descripcion-hero {
+    font-size: 9px;
+    max-width: 240px;
+    color: #ddd;
+    line-height: 1.4;
+    margin-bottom: 50px;
+}
+
+
+.oferta {
+    width: 267px;
+    border: 1px solid var(--naranja);
+    border-radius: 7px;
+    background-color: #100600;
+    padding: 22px 10px 7px;
+    position: relative;
+}
+
+.etiqueta-oferta {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: var(--naranja);
+    color: white;
+    padding: 4px 18px;
+    font-size: 9px;
+    font-weight: 600;
+    border-radius: 0 0 5px 5px;
+}
+
+.oferta h2 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.oferta h2 span {
+    color: var(--naranja);
+}
+
+.oferta h3 {
+    font-size: 22px;
+    color: var(--naranja);
+    margin-bottom: 2px;
+}
+
+.oferta p {
+    font-size: 9px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.btn-oferta {
+    background-color: var(--naranja);
+    color: white;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 11px;
+    padding: 6px;
+}
+
+.btn-oferta:hover {
+    background-color: #e85b00;
+    color: white;
+}
+
+
+.beneficios {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0 15px;
+    background: linear-gradient(transparent, rgba(10,4,0,0.9));
+}
+
+.beneficios-carousel {
+    text-align: center;
+}
+
+.beneficio-item {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.beneficio-item img {
+    width: 30px !important;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.beneficio-item p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+.anime-section {
+    background-color: white;
+    padding: 80px 0 90px;
+}
+
+.anime-texto {
+    padding-left: 25px;
+}
+
+.subtitulo {
+    color: var(--naranja);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.anime-texto h2 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.anime-texto p {
+    font-size: 11px;
+    line-height: 1.4;
+    max-width: 300px;
+    margin-bottom: 65px;
+}
+
+.generos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 45px 10px;
+    max-width: 310px;
+}
+
+.genero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.genero img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.genero span {
+    font-size: 9px;
+}
+
+.anime-imagen {
+    text-align: center;
+    position: relative;
+}
+
+.collage {
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+}
+
+.etiqueta-series {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.3;
+    margin-top: 10px;
+}
+
+.suscripcion {
+    background-color: #100600;
+    background-image:
+        linear-gradient(to right, rgba(10,4,0,0.05), #100600 60%),
+        url("../img/diarios de la boticaria.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0 130px;
+}
+
+.texto-suscripcion {
+    padding-left: 25px;
+}
+
+.texto-suscripcion .subtitulo {
+    font-size: 11px;
+}
+
+.texto-suscripcion h2 {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 5px 0 12px;
+}
+
+.texto-suscripcion p {
+    font-size: 14px;
+    color: #ccc;
+    max-width: 300px;
+}
+
+.precio {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 350px;
+}
+
+.precio-principal {
+    background-color: var(--naranja);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 195px;
+    text-align: center;
+    z-index: 2;
+}
+
+.precio-principal span {
+    display: block;
+    font-size: 21px;
+}
+
+.precio-principal strong {
+    display: block;
+    font-size: 34px;
+}
+
+.precio-extra {
+    border: 1px solid var(--naranja);
+    border-radius: 0 10px 10px 0;
+    padding: 20px 10px 20px 25px;
+    margin-left: -8px;
+    color: var(--naranja);
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.texto-precio {
+    text-align: center;
+    font-size: 11px !important;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.formulario {
+    background-color: #eee;
+    color: #111;
+    border-radius: 12px;
+    padding: 28px;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.formulario h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.formulario p {
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.formulario .form-control {
+    font-size: 11px;
+    height: 35px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.formulario .form-control:focus {
+    border-color: var(--naranja);
+    box-shadow: 0 0 4px rgba(255,101,0,0.3);
+}
+
+.btn-formulario {
+    width: 100%;
+    background-color: var(--naranja);
+    color: white;
+    font-size: 11px;
+    padding: 9px;
+    border-radius: 4px;
+}
+
+.btn-formulario:hover {
+    background-color: #e85b00;
+    color: white;
+}
+
+.terminos {
+    display: block;
+    font-size: 9px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.terminos a {
+    color: #111;
+    text-decoration: underline;
+}
+
+#mensajeFormulario {
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.preguntas {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.preguntas h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.preguntas .nav-link {
+    color: #333;
+    font-size: 14px;
+}
+
+.preguntas .nav-link.active {
+    color: var(--naranja);
+}
+
+.preguntas .accordion-button {
+    font-size: 14px;
+}
+
+.preguntas .accordion-button:not(.collapsed) {
+    background-color: #fff1e8;
+    color: var(--naranja);
+}
+
+.preguntas .accordion-body,
+.preguntas .tab-pane p {
+    font-size: 13px;
+}
+
+
+.footer {
+    background-color: #100600;
+    color: white;
+    padding: 18px 20px;
+}
+
+.logo-footer {
+    width: 110px;
+}
+
+.enlaces-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.enlaces-footer a {
+    color: #ccc;
+    font-size: 9px;
+}
+
+.enlaces-footer a:hover {
+    color: var(--naranja);
+}
+
+.redes-footer {
+    text-align: right;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.iconos-redes img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.redes-footer p {
+    font-size: 9px;
+    color: #ccc;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+
+    .hero {
+        min-height: 550px;
+        background-position: center;
+    }
+
+    .hero-contenido {
+        padding-top: 45px;
+    }
+
+    .anime-section {
+        padding: 60px 0;
+    }
+
+    .anime-texto {
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    .anime-texto p {
+        margin-bottom: 35px;
+    }
+
+    .generos {
+        margin: auto;
+    }
+
+    .anime-imagen {
+        margin-top: 20px;
+    }
+
+    .suscripcion {
+        padding: 70px 0;
+    }
+
+    .texto-suscripcion {
+        margin-bottom: 40px;
+        padding-left: 15px;
+    }
+
+    .formulario {
+        margin: auto;
+    }
+
+    .footer .row {
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+
+    .navbar {
+        padding: 8px 15px;
+    }
+
+    .logo-header {
+        width: 100px;
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+        padding: 15px 0;
+    }
+
+    .navbar-nav li {
+        margin-bottom: 8px;
+    }
+
+
+    .hero {
+        min-height: 620px;
+        background-position: 60% center;
+    }
+
+    .hero-contenido {
+        padding-top: 35px;
+    }
+
+    .logo-principal {
+        width: 190px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .descripcion-hero {
+        font-size: 10px;
+        margin-bottom: 35px;
+        max-width: 230px;
+    }
+
+    .oferta {
+        width: 250px;
+    }
+
+
+
+    .beneficios {
+        padding: 15px 0;
+    }
+
+    .beneficio-item p {
+        font-size: 12px;
+    }
+
+    .beneficio-item img {
+        width: 25px !important;
+        height: 25px;
+    }
+
+
+    .anime-section {
+        padding: 50px 15px;
+    }
+
+    .anime-texto {
+        padding: 0 10px;
+    }
+
+    .anime-texto h2 {
+        font-size: 23px;
+    }
+
+    .anime-texto p {
+        font-size: 12px;
+        margin-bottom: 35px;
+    }
+
+    .generos {
+        max-width: 100%;
+        gap: 30px 5px;
+    }
+
+    .genero img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .genero span {
+        font-size: 8px;
+    }
+
+    .collage {
+        width: 100%;
+    }
+
+
+
+    .suscripcion {
+        padding: 60px 15px;
+        background-position: 35% center;
+    }
+
+    .texto-suscripcion {
+        padding: 0 10px;
+    }
+
+    .texto-suscripcion h2 {
+        font-size: 22px;
+    }
+
+    .precio {
+        max-width: 100%;
+    }
+
+    .precio-principal {
+        min-width: 160px;
+        padding: 15px;
+    }
+
+    .precio-principal span {
+        font-size: 17px;
+    }
+
+    .precio-principal strong {
+        font-size: 28px;
+    }
+
+    .precio-extra {
+        font-size: 12px;
+        padding: 15px 8px 15px 15px;
+    }
+
+    .texto-precio {
+        margin-left: 0;
+    }
+
+    .formulario {
+        padding: 22px;
+    }
+
+
+    .preguntas {
+        padding: 40px 15px;
+    }
+
+    .preguntas h2 {
+        font-size: 21px;
+    }
+
+
+
+    .footer {
+        padding: 25px 10px;
+    }
+
+    .logo-footer {
+        width: 110px;
+        margin-bottom: 15px;
+    }
+
+    .enlaces-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .redes-footer {
+        text-align: center;
+    }
+
+    .iconos-redes {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+}
